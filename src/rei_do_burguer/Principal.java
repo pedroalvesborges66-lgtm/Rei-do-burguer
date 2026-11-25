@@ -34,7 +34,10 @@ public class Principal {
 					System.out.println("4-Rei Borges: R$40,00");
 					System.out.println("5-Rei Matos: R$38,90");
 					System.out.println("6-Rainha Carvalho: R$37,90");
-					System.out.println("7-voltar para o menu");
+					System.out.println("7-Rainha Novais: R$39,90");
+					System.out.println("8-Rei Paiva: R$38,90");
+					System.out.println("9-Rainha Vlatkovic: R$35,90");
+					System.out.println("10-voltar para o menu");
 					System.out.println("-------------------");
 					System.out.println("O que você deseja pedir? ");
 					int lanche = sc.nextInt();
@@ -166,7 +169,70 @@ public class Principal {
 							System.out.println("Voltando ao menu!");
 							System.out.println("---------------------");
 						}
-					} else {
+					}else if (lanche == 7) {
+						soma+=39.90;
+						carrinho[quantidade] = "Rainha Novais";
+						quantidade++;
+						System.out.println("Lanche Rainha Novais adicionado ao carrinho!");
+						System.out.println("---------------------");
+						System.out.println("Deseja finalizar a compra? ");
+						System.out.println("---------------------");
+						finalizar = sc.next();
+						if (finalizar.equalsIgnoreCase("Sim")) {
+							System.out.println("Pedido finalizado!");
+							 System.out.println("Itens do seu pedido:");
+							    for (int f = 0; f < quantidade; f++) {
+							        System.out.println("- " + carrinho[f]);
+							    }
+							System.out.printf("O total do seu pedido foi de: R$%.2f",soma);
+							break;
+						} else {
+							System.out.println("Voltando ao menu!");
+							System.out.println("---------------------");
+						}
+					}else if (lanche == 8) {
+						soma+=38.90;
+						carrinho[quantidade] = "Rei Paiva";
+						quantidade++;
+						System.out.println("Lanche Rei Paiva adicionado ao carrinho!");
+						System.out.println("---------------------");
+						System.out.println("Deseja finalizar a compra? ");
+						System.out.println("---------------------");
+						finalizar = sc.next();
+						if (finalizar.equalsIgnoreCase("Sim")) {
+							System.out.println("Pedido finalizado!");
+							 System.out.println("Itens do seu pedido:");
+							    for (int f = 0; f < quantidade; f++) {
+							        System.out.println("- " + carrinho[f]);
+							    }
+							System.out.printf("O total do seu pedido foi de: R$%.2f",soma);
+							break;
+						} else {
+							System.out.println("Voltando ao menu!");
+							System.out.println("---------------------");
+						}
+					} else if (lanche == 9) {
+						soma+=35.90;
+						carrinho[quantidade] = "Rainha Vlatkovic";
+						quantidade++;
+						System.out.println("Lanche Rainha Vlatkovic adicionado ao carrinho!");
+						System.out.println("---------------------");
+						System.out.println("Deseja finalizar a compra? ");
+						System.out.println("---------------------");
+						finalizar = sc.next();
+						if (finalizar.equalsIgnoreCase("Sim")) {
+							System.out.println("Pedido finalizado!");
+							 System.out.println("Itens do seu pedido:");
+							    for (int f = 0; f < quantidade; f++) {
+							        System.out.println("- " + carrinho[f]);
+							    }
+							System.out.printf("O total do seu pedido foi de: R$%.2f",soma);
+							break;
+						} else {
+							System.out.println("Voltando ao menu!");
+							System.out.println("---------------------");
+						}
+					}   else {
 						System.out.println("Opção inválida");
 					}
 
@@ -423,12 +489,9 @@ public class Principal {
 			} else {
 				System.out.println("Opção inválida");
 
-			}
-		}
-
-			
-		
-	}
+		  }
+		}	
+	  }
 	} while (!menu.equalsIgnoreCase("Sair"));
 
 	
